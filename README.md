@@ -20,9 +20,17 @@ Or install it yourself as:
 
     $ gem install flimper_poncho
 
+## Requirements
+
+- `ENV['PONCHO_API_URL'] = 'https://poncho.io/api/v1'`
+
+- `ENV['PONCHO_API_SIGNATURE_KEY'] = 'super-secure-signature'`
+
 ## Usage
 
-TODO: Write usage instructions here
+- Create a user session:
+
+  `FlimperPoncho::UserSession::Create.run!(email: 'test@flimper.com', password: 'password')`
 
 ## Development
 

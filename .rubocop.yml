@@ -1,6 +1,13 @@
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - spec/**/*.rb
+
 Metrics/LineLength:
   Max: 120
   Enabled: true
-
-Style/Documentation:
-  Enabled: false
+  Exclude:
+    - spec/**/*.rb

@@ -21,7 +21,13 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_development_dependency 'bundler', '~> 1.16'
+  spec.add_development_dependency 'byebug', '~> 11.0.1'
   spec.add_development_dependency 'rake', '~> 12.3'
   spec.add_development_dependency 'rspec', '~> 3.8'
   spec.add_development_dependency 'rubocop', '~> 0.66.0'
+  spec.add_development_dependency 'webmock', '~> 3.5.1'
+
+  spec.add_dependency 'active_interaction', '~> 3.7'
+  spec.add_dependency 'faraday', '~> 0.15.4'
+  spec.add_dependency 'jwt', '~> 2.1'
 end

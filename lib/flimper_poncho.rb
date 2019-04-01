@@ -1,5 +1,5 @@
 require 'flimper_poncho/version'
+require 'flimper_poncho/user_session/create'
 
 module FlimperPoncho
-  # Your code goes here...
 end
