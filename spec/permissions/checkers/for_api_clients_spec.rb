@@ -10,7 +10,6 @@ RSpec.describe Permissions::Checkers::ForApiClients do
       expect(
         described_class.new(
           jwt_token: 'fake-token',
-          name: 'FLIMPER-BACK',
           resource_code: 'TWITTER-API',
           level: 'READ'
         ).can_perform_action?
@@ -23,7 +22,6 @@ RSpec.describe Permissions::Checkers::ForApiClients do
       expect(
         described_class.new(
           jwt_token: valid_jwt,
-          name: 'FLIMPER-BACK',
           resource_code: 'TWITTER_API_BACKEND',
           level: 'READ'
         ).can_perform_action?
@@ -36,7 +34,6 @@ RSpec.describe Permissions::Checkers::ForApiClients do
       expect(
         described_class.new(
           jwt_token: valid_jwt,
-          name: 'FLIMPER-BACK',
           resource_code: 'TWITTER_API_BACKEND',
           level: 'WRITE'
         ).can_perform_action?

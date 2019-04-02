@@ -38,11 +38,11 @@ Or install it yourself as:
 
 - Check ApiClient permission:
 
-  `Permissions::Checkers::ForApiClients.new(jwt_token: 'valid_jwt', name: 'FLIMPER-BACK', resource_code: 'TWITTER_API_BACKEND', level: 'READ').can_perform_action?`
+  `Permissions::Checkers::ForApiClients.new(jwt_token: 'valid_jwt', resource_code: 'TWITTER_API_BACKEND', level: 'READ').can_perform_action?`
 
 - Check User permission:
 
-  `Permissions::Checkers::ForUsers.new(jwt_token: 'valid_jwt', email: 'email-1@gmail.com', resource_code: 'application-1', level: 'READ').can_perform_action?`
+  `Permissions::Checkers::ForUsers.new(jwt_token: 'valid_jwt', resource_code: 'application-1', level: 'READ').can_perform_action?`
 
 ## Development
 

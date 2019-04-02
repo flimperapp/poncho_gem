@@ -10,7 +10,6 @@ RSpec.describe Permissions::Checkers::ForUsers do
       expect(
         described_class.new(
           jwt_token: 'fake-token',
-          email: 'email-1@gmail.com',
           resource_code: 'application-1',
           level: 'READ'
         ).can_perform_action?
@@ -23,7 +22,6 @@ RSpec.describe Permissions::Checkers::ForUsers do
       expect(
         described_class.new(
           jwt_token: valid_jwt,
-          email: 'email-1@gmail.com',
           resource_code: 'application-1',
           level: 'WRITE'
         ).can_perform_action?
@@ -36,7 +34,6 @@ RSpec.describe Permissions::Checkers::ForUsers do
       expect(
         described_class.new(
           jwt_token: valid_jwt,
-          email: 'email-1@gmail.com',
           resource_code: 'application-1',
           level: 'READ'
         ).can_perform_action?
@@ -53,7 +50,6 @@ RSpec.describe Permissions::Checkers::ForUsers do
       expect(
         described_class.new(
           jwt_token: admin_jwt,
-          email: 'email-1@gmail.com',
           resource_code: 'application-1',
           level: 'READ'
         ).can_perform_action?
@@ -64,7 +60,6 @@ RSpec.describe Permissions::Checkers::ForUsers do
       expect(
         described_class.new(
           jwt_token: admin_jwt,
-          email: 'email-1@gmail.com',
           resource_code: 'application-1',
           level: 'WRITE'
         ).can_perform_action?

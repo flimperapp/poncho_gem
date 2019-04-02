@@ -16,7 +16,7 @@ module Permissions
       end
 
       def decoded_jwt
-        JWT.decode(jwt_token, ENV.fetch('PONCHO_API_SIGNATURE_KEY'), true, algorithm: 'HS256')[0]
+        @decoded_jwt ||= JWT.decode(jwt_token, ENV.fetch('PONCHO_API_SIGNATURE_KEY'), true, algorithm: 'HS256')[0]
       end
 
       def permission_query
