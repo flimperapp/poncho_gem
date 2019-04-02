@@ -28,9 +28,21 @@ Or install it yourself as:
 
 ## Usage
 
-- Create a user session:
+- Issue an ApiClient jwt:
 
-  `FlimperPoncho::UserSession::Create.run!(email: 'test@flimper.com', password: 'password')`
+  `Jwts::Issuers::ForApiClients.new(name: 'FLIMPER-BACK', authorization_token: 'FLIMPER-BACK-AUTHORIZATION-TOKEN').issue!`
+
+- Issue a User jwt:
+
+  `Jwts::Issuers::ForUsers.new(email: 'test@test.com', password: 'password').issue!`
+
+- Check ApiClient permission:
+
+  `Permissions::Checkers::ForApiClients.new(jwt_token: 'valid_jwt', name: 'FLIMPER-BACK', resource_code: 'TWITTER_API_BACKEND', level: 'READ').can_perform_action?`
+
+- Check User permission:
+
+  `Permissions::Checkers::ForUsers.new(jwt_token: 'valid_jwt', email: 'email-1@gmail.com', resource_code: 'application-1', level: 'READ').can_perform_action?`
 
 ## Development
 
